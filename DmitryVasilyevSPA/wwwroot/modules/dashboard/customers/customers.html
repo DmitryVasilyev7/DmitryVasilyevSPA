@@ -1,0 +1,95 @@
+﻿<h4>Customers</h4>
+
+<div class="row row-flex">
+    <div class="col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading clearfix">
+                <div class="row row-flex">
+                    <div class="col-md-6">
+                        <h4>Customers</h4>
+                    </div>
+                    <div class="col-md-6">
+                        <button class="pull-right btn btn-light" style="width: 100px" ng-click="editCustomer()">Add</button>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-body">
+                <div class="row row-flex">
+                    <div class="col-md-12">
+                        <div id="grid" dx-data-grid="grids.customers" dx-item-alias="cell">
+                            <div data-options="dxTemplate:{ name:'action-template' }">
+                                <button ng-click="editCustomer(cell.data)" title="Edit" class="btn btn-primary btn-xs"> <span class="glyphicon glyphicon-pencil"></span></button>
+                                <button ng-click="deleteCustomer(cell.data)" title="Remove" class="btn btn-danger btn-xs delete"> <span class="glyphicon glyphicon-remove"></span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8">
+        <div class="row row-flex">
+            <div class="col-md-12 orderGrid">
+                <div class="panel panel-default">
+                    <div class="panel-heading clearfix">
+                        <div class="row row-flex">
+                            <div class="col-md-6">
+                                <h4>Orders</h4>
+                            </div>
+                            <div class="col-md-6">
+                                <button ng-if="selectedCustomer" class="pull-right btn btn-light" style="width: 100px" ng-click="editOrder()">Add</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row row-flex">
+                            <div class="col-md-12">
+                                <div id="grid" dx-data-grid="grids.orders" dx-item-alias="cell">
+                                    <div data-options="dxTemplate:{ name:'action-template' }">
+                                        <button ng-click="editOrder(cell.data)" title="Edit" class="btn btn-primary btn-xs"> <span class="glyphicon glyphicon-pencil"></span></button>
+                                        <button ng-click="deleteOrder(cell.data)" title="Remove" class="btn btn-danger btn-xs delete"> <span class="glyphicon glyphicon-remove"></span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading clearfix">
+                        <div class="row row-flex">
+                            <div class="col-md-6">
+                                <h4>Order details</h4>
+                            </div>
+                            <div class="col-md-6">
+                                <button ng-if="selectedOrder" class="pull-right btn btn-light" style="width: 100px" ng-click="editOrderItem()">Add</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row row-flex">
+                            <div class="col-md-12">
+                                <div id="grid" dx-data-grid="grids.orderItems" dx-item-alias="cell">
+                                    <div data-options="dxTemplate:{ name:'possition-template' }">
+                                        {{cell.rowIndex + 1}}
+                                    </div>
+                                    <div data-options="dxTemplate:{ name:'action-template' }">
+                                        <button ng-click="editOrderItem(cell.data)" title="Edit" class="btn btn-primary btn-xs"> <span class="glyphicon glyphicon-pencil"></span></button>
+                                        <button ng-click="deleteOrderItem(cell.data)" title="Remove" class="btn btn-danger btn-xs delete"> <span class="glyphicon glyphicon-remove"></span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<customer-editor-popup config="popups.customer.config" callback="popups.customer.callback()"></customer-editor-popup>
+
+<order-editor-popup customer="selectedCustomer" config="popups.order.config" callback="popups.order.callback(hasChanges)"></order-editor-popup>
+
+<order-item-editor-popup order="selectedOrder" config="popups.orderItem.config" callback="popups.orderItem.callback(hasChanges)"></order-item-editor-popup>

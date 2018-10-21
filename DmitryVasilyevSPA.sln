@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DmitryVasilyevSPA", "DmitryVasilyevSPA\DmitryVasilyevSPA.csproj", "{DF9B0782-452E-44C6-92C0-03A705E78079}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DB", "DB", "{F34C9633-6BB8-4189-928E-653C2D2A536C}"
+	ProjectSection(SolutionItems) = preProject
+		DB\01.1 RecoveryDb.sql = DB\01.1 RecoveryDb.sql
+		DB\02 InitDbData.sql = DB\02 InitDbData.sql
+		DB\InitDB.sql = DB\InitDB.sql
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DF9B0782-452E-44C6-92C0-03A705E78079}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF9B0782-452E-44C6-92C0-03A705E78079}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF9B0782-452E-44C6-92C0-03A705E78079}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF9B0782-452E-44C6-92C0-03A705E78079}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {86717112-AAD1-460B-AAFC-BAD405E580FB}
+	EndGlobalSection
+EndGlobal

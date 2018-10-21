@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Customer";
+}
+
+<div ng-app="spaApp" class="dashboard">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav">
+                <li><a ui-sref="customers">Customer</a></li>
+                <li><a ui-sref="contacts">Contacts</a></li>
+                <li><a ui-sref="about">About</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div ui-view class="dashboard"></div>
+    <hr />
+</div>

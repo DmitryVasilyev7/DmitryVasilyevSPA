@@ -1,0 +1,14 @@
+{
+  "name": "Sample",
+  "private": true,
+  "dependencies": {
+    "jquery": "3.3.1",
+    "angular": "angularjs#v1.5.5",
+    "angular-ui-router": "0.2.18",
+    "knockout": "v3.4.2",
+    "bootstrap": "v3.3.7",
+    "devextreme": "17.2.4",
+    "devextreme-aspnet-data": "1.3.0",
+    "angular-underscore-module": "v1.0.3"
+  }
+}

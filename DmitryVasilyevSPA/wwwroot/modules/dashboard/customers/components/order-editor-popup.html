@@ -1,0 +1,20 @@
+<div class="popup" dx-popup="$ctrl.orderPopup.config">
+    <div data-options="dxTemplate: { name:'orderPopup' }">
+        <div class="col-md-12">
+            <form>
+                <div class="form-group">
+                    <label class="control-label">Number</label>
+                    <div class="form-control" dx-number-box="$ctrl.orderPopup.form.number"></div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Date</label>
+                    <div class="form-control"  dx-date-box="$ctrl.orderPopup.form.date"></div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">State</label>
+                    <div class="form-control" dx-select-box="$ctrl.orderPopup.form.state"></div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+﻿html, body, .dashboard, .container, .panel-default {
+    height: 100%;
+}
+
+.about {
+    height: 70%;
+}
+
+#grid .dx-toolbar .dx-texteditor {
+    width: 100% !important;
+}
+
+#grid .dx-toolbar .dx-toolbar-after {
+    padding-left: 0px;
+    width: 100% !important;
+}
+
+#grid .dx-datagrid-search-panel {
+    margin-left: 0px !important;
+}
+
+#grid .dx-toolbar .dx-toolbar-after {
+    padding-left: 0px !important;
+}
+
+.dx-datagrid-headers .dx-datagrid-text-content {
+    text-align: center;
+}
+
+.row-flex {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.orderGrid {
+    margin-bottom: 15px;
+}
