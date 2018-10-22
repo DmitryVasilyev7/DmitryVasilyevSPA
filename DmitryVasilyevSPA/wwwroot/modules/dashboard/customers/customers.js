@@ -3,9 +3,9 @@
 
     angular
         .module('spaApp.dashboard')
-        .controller('CustomersCtrl', ["$scope", "enums", "_", "dashboardService", CustomersCtrl]);
+        .controller('CustomersCtrl', ["$scope", "enums", "_", "messages", "dashboardService", CustomersCtrl]);
 
-    function CustomersCtrl($scope, enums, _, dashboardService) {
+    function CustomersCtrl($scope, enums, _, messages, dashboardService) {
         var vm = $scope;
 
         vm.selectedCustomer = null;
@@ -240,19 +240,9 @@
 
         vm.deleteCustomer = function (item) {
             dashboardService.deleteCustomer(item.id).error(function (message) {
-                DevExpress.ui.notify({
-                    message: "Error",
-                    type: "error",
-                    displayTime: 3000,
-                    closeOnClick: true
-                });
+                messages.sendMessage("error", "Error");
             }).success(function (result) {
-                DevExpress.ui.notify({
-                    message: "Customer has been deleted",
-                    type: "success",
-                    displayTime: 3000,
-                    closeOnClick: true
-                });
+                messages.sendMessage("success", "Customer has been deleted");
 
                 vm.selectedCustomer = null;
                 vm.grids.customers.instance.refresh();
@@ -279,19 +269,9 @@
 
         vm.deleteOrder = function (item) {
             dashboardService.deleteOrder(item.id).error(function (message) {
-                DevExpress.ui.notify({
-                    message: "Error",
-                    type: "error",
-                    displayTime: 3000,
-                    closeOnClick: true
-                });
+                messages.sendMessage("error", "Error");
             }).success(function (result) {
-                DevExpress.ui.notify({
-                    message: "Order has been deleted",
-                    type: "success",
-                    displayTime: 3000,
-                    closeOnClick: true
-                });
+                messages.sendMessage("success", "Order has been deleted");
 
                 vm.selectedOrder = null;
                 vm.grids.orders.instance.refresh();
@@ -317,19 +297,9 @@
 
         vm.deleteOrderItem = function (item) {
             dashboardService.deleteOrderItem(item.id).error(function (message) {
-                DevExpress.ui.notify({
-                    message: "Error",
-                    type: "error",
-                    displayTime: 3000,
-                    closeOnClick: true
-                });
+                messages.sendMessage("error", "Error");
             }).success(function (result) {
-                DevExpress.ui.notify({
-                    message: "Product has been deleted",
-                    type: "success",
-                    displayTime: 3000,
-                    closeOnClick: true
-                });
+                messages.sendMessage("success", "Product has been deleted");
 
                 vm.grids.orderItems.instance.refresh();
                 vm.grids.orders.instance.refresh();

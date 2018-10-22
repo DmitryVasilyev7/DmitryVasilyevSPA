@@ -9,7 +9,7 @@
                 config: "=",
                 callback: '&'
             },
-            controller: ["$scope", "dashboardService", function ($scope, dashboardService) {
+            controller: ["$scope", "dashboardService", "messages", function ($scope, dashboardService, messages) {
                 var ctrl = this;
 
                 ctrl.customer = {
@@ -99,19 +99,9 @@
 
                 ctrl.save = function () {
                     dashboardService.editCustomer(ctrl.customer).error(function (message) {
-                        DevExpress.ui.notify({
-                            message: "Error",
-                            type: "error",
-                            displayTime: 3000,
-                            closeOnClick: true
-                        });
+                        messages.sendMessage("error", "Error");
                     }).success(function (result) {
-                        DevExpress.ui.notify({
-                            message: "Customer has been added",
-                            type: "success",
-                            displayTime: 3000,
-                            closeOnClick: true
-                        });
+                        messages.sendMessage("success", "Customer has been added");
 
                         ctrl.customerPopup.instance.hide();
                         $scope.$ctrl.callback();

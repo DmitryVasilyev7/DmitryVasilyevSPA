@@ -10,7 +10,7 @@
                 config: "=",
                 callback: '&'
             },
-            controller: ["$scope", "dashboardService", "enums", function($scope, dashboardService, enums) {
+            controller: ["$scope", "dashboardService", "enums", "messages", function ($scope, dashboardService, enums, messages) {
                 var ctrl = this;
 
                 ctrl.order = {
@@ -123,19 +123,9 @@
                     ctrl.order.customerId = ctrl.customer.id;
                     
                     dashboardService.editOrder(ctrl.order).error(function (message) {
-                        DevExpress.ui.notify({
-                            message: "Error",
-                            type: "error",
-                            displayTime: 3000,
-                            closeOnClick: true
-                        });
+                        messages.sendMessage("error", "Error");
                     }).success(function (result) {
-                        DevExpress.ui.notify({
-                            message: "Order has been added",
-                            type: "success",
-                            displayTime: 3000,
-                            closeOnClick: true
-                        });
+                        messages.sendMessage("success", "Order has been added");
 
                         ctrl.orderPopup.instance.hide();
                         $scope.$ctrl.callback();

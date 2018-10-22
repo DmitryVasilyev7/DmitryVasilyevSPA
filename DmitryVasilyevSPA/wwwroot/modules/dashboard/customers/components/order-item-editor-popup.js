@@ -10,7 +10,7 @@
                 config: "=",
                 callback: '&'
             },
-            controller: ["$scope", "dashboardService", function($scope, dashboardService) {
+            controller: ["$scope", "dashboardService", "messages", function ($scope, dashboardService, messages) {
                 var ctrl = this;
 
                 ctrl.item = {
@@ -119,19 +119,9 @@
                     ctrl.item.orderId = ctrl.order.id;
 
                     dashboardService.editOrderItem(ctrl.item).error(function (message) {
-                        DevExpress.ui.notify({
-                            message: "Error",
-                            type: "error",
-                            displayTime: 3000,
-                            closeOnClick: true
-                        });
+                        messages.sendMessage("error", "Error");
                     }).success(function (result) {
-                        DevExpress.ui.notify({
-                            message: "Item has been added",
-                            type: "success",
-                            displayTime: 3000,
-                            closeOnClick: true
-                        });
+                        messages.sendMessage("success", "Product has been added");
 
                         ctrl.itemPopup.instance.hide();
                         
