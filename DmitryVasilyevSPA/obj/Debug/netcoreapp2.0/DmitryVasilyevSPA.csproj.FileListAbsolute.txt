@@ -14,7 +14,6 @@ C:\Users\Meday\Source\Repos\DmitryVasilyevSPA Cop\DmitryVasilyevSPA\bin\Debug\ne
 C:\Users\Meday\Source\Repos\DmitryVasilyevSPA Cop\DmitryVasilyevSPA\bin\Debug\netcoreapp2.0\DmitryVasilyevSPA.runtimeconfig.dev.json
 C:\Users\Meday\Source\Repos\DmitryVasilyevSPA Cop\DmitryVasilyevSPA\bin\Debug\netcoreapp2.0\DmitryVasilyevSPA.dll
 C:\Users\Meday\Source\Repos\DmitryVasilyevSPA Cop\DmitryVasilyevSPA\bin\Debug\netcoreapp2.0\DmitryVasilyevSPA.pdb
-C:\Users\Meday\Source\Repos\DmitryVasilyevSPA Cop\DmitryVasilyevSPA\obj\Debug\netcoreapp2.0\DmitryVasilyevSPA.csprojResolveAssemblyReference.cache
 C:\Users\Meday\Source\Repos\DmitryVasilyevSPA Cop\DmitryVasilyevSPA\obj\Debug\netcoreapp2.0\DmitryVasilyevSPA.csproj.CoreCompileInputs.cache
 C:\Users\Meday\Source\Repos\DmitryVasilyevSPA Cop\DmitryVasilyevSPA\obj\Debug\netcoreapp2.0\DmitryVasilyevSPA.AssemblyInfoInputs.cache
 C:\Users\Meday\Source\Repos\DmitryVasilyevSPA Cop\DmitryVasilyevSPA\obj\Debug\netcoreapp2.0\DmitryVasilyevSPA.AssemblyInfo.cs

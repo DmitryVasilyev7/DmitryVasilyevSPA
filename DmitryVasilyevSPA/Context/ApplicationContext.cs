@@ -1,7 +1,7 @@
 using DmitryVasilyevSPA.Models;
 using Microsoft.EntityFrameworkCore;
  
-namespace DmitryVasilyevSPA.Models
+namespace DmitryVasilyevSPA.Context
 {
     public class ApplicationContext : DbContext
     {
