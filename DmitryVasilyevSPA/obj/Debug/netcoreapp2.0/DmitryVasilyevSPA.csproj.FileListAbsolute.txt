@@ -19,3 +19,4 @@ C:\Users\Meday\Source\Repos\DmitryVasilyevSPA Cop\DmitryVasilyevSPA\obj\Debug\ne
 C:\Users\Meday\Source\Repos\DmitryVasilyevSPA Cop\DmitryVasilyevSPA\obj\Debug\netcoreapp2.0\DmitryVasilyevSPA.AssemblyInfo.cs
 C:\Users\Meday\Source\Repos\DmitryVasilyevSPA Cop\DmitryVasilyevSPA\obj\Debug\netcoreapp2.0\DmitryVasilyevSPA.dll
 C:\Users\Meday\Source\Repos\DmitryVasilyevSPA Cop\DmitryVasilyevSPA\obj\Debug\netcoreapp2.0\DmitryVasilyevSPA.pdb
+C:\Users\Meday\Source\Repos\DmitryVasilyevSPA Cop\DmitryVasilyevSPA\obj\Debug\netcoreapp2.0\DmitryVasilyevSPA.csprojResolveAssemblyReference.cache
