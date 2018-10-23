@@ -100,20 +100,6 @@ namespace DmitryVasilyevSPA.Controllers
             return Ok();
         }
 
-        [HttpPut]
-        public IActionResult Put(long key, string values)
-        {
-            var order = _db.Order.FirstOrDefault(x => x.Id == key);
-            JsonConvert.PopulateObject(values, order);
-
-            if (!TryValidateModel(order))
-                return BadRequest();
-
-            _db.SaveChanges();
-
-            return Ok();
-        }
-
         [HttpDelete("{id}")]
         public IActionResult Remove(long id)
         {
